@@ -1,10 +1,10 @@
 <?php
 require_once __DIR__ . "/config.php";
 
-$query_str = "SELECT tx_login, nm_avaliador FROM avaliador";
-$query = $dbh->prepare($query_str);
-$query->execute();
+use EtecAB\Dao\AvaliadorDao;
 
+$avaliadorDao = new AvaliadorDao($dbh);
+$avaliadores = $avaliadorDao->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -23,16 +23,18 @@ $query->execute();
     <tr>
         <th>Login</th>
         <th>Nome</th>
+        <th>Status</th>
     </tr>
 </thead>
 <tbody>
    
-    <?php while($row = $query->fetch()): ?>
+    <?php foreach($avaliadores as $avaliador): ?>
     <tr>
-        <td><?= $row['tx_login'] ?></td>
-        <td><?= $row['nm_avaliador'] ?></td>
+        <td><?= $avaliador->getLogin() ?></td>
+        <td><?= $avaliador->getNome() ?></td>
+        <td><?= $avaliador->getStatus() ?></td>
     </tr>
-    <?php endwhile; ?>
+    <?php endforeach; ?>
 </tbody>
 </table>
 </body>

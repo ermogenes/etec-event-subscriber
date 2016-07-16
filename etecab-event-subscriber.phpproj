@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>etecab-event-subscriber</Name>
+    <ProjectGuid>{5b2d4d53-62db-4ef5-8452-40ab9945496c}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\Dao\AvaliadorDao.php" />
+    <Compile Include="app\Entity\Avaliador.php" />
+    <Compile Include="app\Entity\Inscricao.php" />
+    <Compile Include="app\Entity\Inscrito.php" />
+    <Compile Include="app\config.php" />
+    <Compile Include="app\loader.php" />
+    <Compile Include="app\index.php" />
+    <Compile Include="consoleapp\console.php" />
+    <Compile Include="db\ddl.sql" />
+    <Compile Include="db\insert_avaliador_sample.sql" />
+    <Compile Include="db\model.mwb" />
+    <Compile Include=".gitignore" />
+    <Compile Include="README.md" />
+    <Compile Include="webapp\config.php" />
+    <Compile Include="webapp\Dao\AvaliadorDao.php" />
+    <Compile Include="webapp\Entity\Avaliador.php" />
+    <Compile Include="webapp\Entity\Inscrito.php" />
+    <Compile Include="webapp\index.php" />
+    <Compile Include="webapp\loader.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\Dao" />
+    <Folder Include="app\Entity" />
+    <Folder Include="consoleapp\" />
+    <Folder Include="webapp\" />
+    <Folder Include="db" />
+    <Folder Include="webapp\" />
+    <Folder Include="webapp\Dao\" />
+    <Folder Include="webapp\Entity\" />
+  </ItemGroup>
+</Project>
