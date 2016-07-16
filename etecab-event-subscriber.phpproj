@@ -16,29 +16,23 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app\Dao\AvaliadorDao.php" />
-    <Compile Include="app\Entity\Avaliador.php" />
-    <Compile Include="app\Entity\Inscricao.php" />
-    <Compile Include="app\Entity\Inscrito.php" />
-    <Compile Include="app\config.php" />
-    <Compile Include="app\loader.php" />
-    <Compile Include="app\index.php" />
     <Compile Include="consoleapp\console.php" />
     <Compile Include="db\ddl.sql" />
+    <Compile Include="webapp\Dao\EventoDao.php" />
     <Compile Include="db\insert_avaliador_sample.sql" />
     <Compile Include="db\model.mwb" />
     <Compile Include=".gitignore" />
     <Compile Include="README.md" />
     <Compile Include="webapp\config.php" />
     <Compile Include="webapp\Dao\AvaliadorDao.php" />
+    <Compile Include="webapp\Dao\InscritoDao.php" />
     <Compile Include="webapp\Entity\Avaliador.php" />
+    <Compile Include="webapp\Entity\Evento.php" />
     <Compile Include="webapp\Entity\Inscrito.php" />
     <Compile Include="webapp\index.php" />
     <Compile Include="webapp\loader.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\Dao" />
-    <Folder Include="app\Entity" />
     <Folder Include="consoleapp\" />
     <Folder Include="webapp\" />
     <Folder Include="db" />

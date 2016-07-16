@@ -3,6 +3,7 @@ namespace EtecAB\Entity;
 
 class Inscrito
 {
+    private $id;
 	private $rg;
 	private $ra;
 	private $nome;
@@ -13,6 +14,7 @@ class Inscrito
 
 	function __construct(array $inscrito = array())
 	{
+        $id = null;
 		$rg = null;
 		$ra = null;
 		$nome = null;
@@ -22,6 +24,7 @@ class Inscrito
 		$fone = null;
 		extract($inscrito);
 
+		$this->setId($id);
 		$this->setRg($rg);
 		$this->setRa($ra);
 		$this->setNome($nome);
@@ -29,6 +32,11 @@ class Inscrito
 		$this->setDtnasc($dtnasc);
 		$this->setEmail($email);
 		$this->setFone($fone);
+	}
+
+	public function setId($id)
+	{
+		$this->id = $id;
 	}
 
 	public function setRg($rg)
@@ -64,6 +72,11 @@ class Inscrito
 	public function setFone($fone)
 	{
 		$this->fone = $fone;
+	}
+
+	public function getId()
+	{
+		return $this->id;
 	}
 
 	public function getRg()
